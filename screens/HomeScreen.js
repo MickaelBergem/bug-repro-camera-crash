@@ -17,6 +17,13 @@ export default class HomeScreen extends React.Component {
     header: null,
   };
 
+  componentDidMount() {
+    this.props.navigation.addListener(
+      'didFocus',
+      () => this.props.navigation.navigate('ScannerScreen'),
+    );
+  }
+
   render() {
     return (
       <View style={styles.container}>

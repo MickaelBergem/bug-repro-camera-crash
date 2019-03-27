@@ -15,6 +15,7 @@ class Scanner extends React.Component<Props, State> {
     this.setState({
       hasCameraPermission: status === 'granted',
     });
+    this.props.navigation.navigate('HomeScreen');
   }
 
   render() {
